@@ -3,10 +3,10 @@ import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
-import AccountMenu from './AccountMenu';
-import BasicForm from './BasicForm'
+import AccountMenu from './AccountMenu.js';
+import BasicForm from './BasicForm.js'
 
-export default function App() {
+function App() {
 	const [openForm, setOpenForm] = React.useState(false);
 	const handleOnClick = (page) => {
 		console.log('open');
@@ -19,7 +19,7 @@ export default function App() {
   return (
     <Container maxWidth="sm">
 	<AccountMenu onClick={handleOnClick} />
-	{openForm && <Basicorm />}
+	{openForm && <BasicForm />}
       <Box sx={{ my: 4 }}>
         <Typography variant="h4" component="h1" gutterBottom>
           React Skills test
@@ -28,3 +28,5 @@ export default function App() {
     </Container>
   );
 }
+
+export default App;
