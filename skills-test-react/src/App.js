@@ -2,9 +2,9 @@ import * as React from 'react';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import Link from '@mui/material/Link';
-import AccountMenu from './AccountMenu.js';
-import BasicForm from './BasicForm.js'
+import AccountMenu from './components/AccountMenu.js';
+import TodoList from './Todo/TodoList.js';
+import Form from './Todo/Form.js'
 
 function App() {
 	const [openForm, setOpenForm] = React.useState(false);
@@ -19,8 +19,9 @@ function App() {
   return (
     <Container maxWidth="sm">
 	<AccountMenu onClick={handleOnClick} />
-	{openForm && <BasicForm />}
+	{openForm && <Form />}
       <Box sx={{ my: 4 }}>
+		<TodoList />
         <Typography variant="h4" component="h1" gutterBottom>
           React Skills test
         </Typography>
